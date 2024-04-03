@@ -1,0 +1,277 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+* {
+   font-family: "Rubik", sans-serif;
+}
+
+.App {
+   width: 350px;
+   height: 600px;
+   max-width: 350px;
+   max-height: 600px;
+   display: flex;
+   flex-direction: column;
+   overflow: hidden;
+   background: url(assets/background-image.jpg) no-repeat 50% / cover;
+}
+
+/* Loading Circle */
+
+.loader {
+   width: 50px;
+   aspect-ratio: 1;
+   border-radius: 50%;
+   border: 6px solid #075803;
+   animation: l20-1 1.2s infinite linear alternate, l20-2 2.4s infinite linear;
+}
+@keyframes l20-1 {
+   0% {
+      clip-path: polygon(50% 50%, 0 0, 50% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 0%);
+   }
+   12.5% {
+      clip-path: polygon(
+         50% 50%,
+         0 0,
+         50% 0%,
+         100% 0%,
+         100% 0%,
+         100% 0%,
+         100% 0%
+      );
+   }
+   25% {
+      clip-path: polygon(
+         50% 50%,
+         0 0,
+         50% 0%,
+         100% 0%,
+         100% 100%,
+         100% 100%,
+         100% 100%
+      );
+   }
+   50% {
+      clip-path: polygon(
+         50% 50%,
+         0 0,
+         50% 0%,
+         100% 0%,
+         100% 100%,
+         50% 100%,
+         0% 100%
+      );
+   }
+   62.5% {
+      clip-path: polygon(
+         50% 50%,
+         100% 0,
+         100% 0%,
+         100% 0%,
+         100% 100%,
+         50% 100%,
+         0% 100%
+      );
+   }
+   75% {
+      clip-path: polygon(
+         50% 50%,
+         100% 100%,
+         100% 100%,
+         100% 100%,
+         100% 100%,
+         50% 100%,
+         0% 100%
+      );
+   }
+   100% {
+      clip-path: polygon(
+         50% 50%,
+         50% 100%,
+         50% 100%,
+         50% 100%,
+         50% 100%,
+         50% 100%,
+         0% 100%
+      );
+   }
+}
+@keyframes l20-2 {
+   0% {
+      transform: scaleY(1) rotate(0deg);
+   }
+   49.99% {
+      transform: scaleY(1) rotate(135deg);
+   }
+   50% {
+      transform: scaleY(-1) rotate(0deg);
+   }
+   100% {
+      transform: scaleY(-1) rotate(-135deg);
+   }
+}
+
+/* Finish Loading Circle */
+
+.dashboard-balance {
+   background: rgb(11, 178, 0);
+   background: linear-gradient(
+      315deg,
+      rgba(11, 178, 0, 1) 0%,
+      rgba(10, 132, 4, 1) 100%
+   );
+}
+.light-green-gradient {
+   background: rgb(22, 222, 4);
+   background: linear-gradient(
+      228deg,
+      rgba(22, 222, 4, 1) 0%,
+      rgba(10, 132, 4, 1) 50%,
+      rgba(14, 106, 10, 1) 100%
+   );
+}
+.dashboard-wallet-address,
+.dashboard-send-token {
+   background: rgb(14, 106, 10);
+   background: linear-gradient(
+      45deg,
+      rgba(14, 106, 10, 1) 0%,
+      rgba(1, 50, 2, 1) 100%
+   );
+}
+.opacity-gradient-green {
+   background: rgb(22, 222, 4);
+   background: linear-gradient(
+      175deg,
+      rgba(22, 222, 4, 0) 0%,
+      rgba(22, 222, 4, 0.5102415966386555) 51%,
+      rgba(10, 132, 4, 1) 100%
+   );
+}
+/* ABSOLUTE CENTER BOTH HORIZONTAL AND VERTICAL */
+.absolute-center {
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+/* ABSOLUTE CENTER HORIZONTAL*/
+.absolute-center-horizontal {
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+/* WHITE INLINE BACKDROP BLURRY DIV ABSOLUTE */
+.bg-shadow {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(255, 255, 255, 0.829);
+   border-radius: 0.75rem;
+   backdrop-filter: blur(10px);
+   background: hsla(0, 0%, 100%, 0.1);
+   box-shadow: 0 54px 55px rgba(0, 0, 0, 0.25), 0 -12px 30px rgba(0, 0, 0, 0.12),
+      0 4px 6px rgba(0, 0, 0, 0.12), 0 12px 13px rgba(0, 0, 0, 0.17),
+      0 -3px 5px rgba(0, 0, 0, 0.09);
+}
+/* WHITE INLINE BACKDROP BLURRY DIV RELATIVE */
+.bg-shadow-relative {
+   background-color: rgba(255, 255, 255, 0.829);
+   border-radius: 0.75rem;
+   backdrop-filter: blur(10px);
+   background: hsla(0, 0%, 100%, 0.1);
+   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25), 0 -1px 3px rgba(0, 0, 0, 0.12),
+      0 4px 6px rgba(0, 0, 0, 0.12), 0 12px 13px rgba(0, 0, 0, 0.17),
+      0 -3px 5px rgba(0, 0, 0, 0.09);
+   z-index: 10;
+}
+.bg-shadow-relative-2 {
+   background-color: rgba(255, 255, 255, 0.925);
+   border-radius: 0.75rem;
+   backdrop-filter: blur(10px);
+   background: hsl(135, 94%, 19%);
+   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25), 0 -1px 3px rgba(0, 0, 0, 0.12),
+      0 4px 6px rgba(0, 0, 0, 0.12), 0 12px 13px rgba(0, 0, 0, 0.17),
+      0 -3px 5px rgba(0, 0, 0, 0.09);
+   z-index: 40;
+}
+
+.menu {
+   position: absolute;
+   top: 48px;
+   right: 0;
+   width: 100%;
+   height: 552px;
+   background: #013202;
+   transition: transform 0.3s ease-in-out;
+   z-index: 30;
+}
+
+.menu-open {
+   transform: translateX(0);
+}
+
+.menu-close {
+   transform: translateX(100%);
+}
+.option {
+   transition: all 0.3s ease-in-out;
+   height: 0px;
+}
+
+.option.open {
+   height: 360px;
+}
+.down-arrow {
+   transition: all 0.3s ease-in-out;
+   transform: rotate(0deg);
+}
+.down-arrow.open {
+   transform: rotate(180deg);
+}
+
+/* Custom Scrollbar For Network List */
+
+.network-items::-webkit-scrollbar {
+   width: 0.5em;
+   border-radius: 50px;
+}
+
+.network-items::-webkit-scrollbar-track {
+   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+   border-radius: 50px;
+}
+
+.network-items::-webkit-scrollbar-thumb {
+   background-color: #ffffff3b;
+   border-radius: 50px;
+}
+.tokens-container::-webkit-scrollbar {
+   width: 0.5em;
+   border-radius: 50px;
+}
+
+.tokens-container::-webkit-scrollbar-track {
+   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+   border-radius: 50px;
+}
+
+.tokens-container::-webkit-scrollbar-thumb {
+   background-color: #ffffff3b;
+   border-radius: 50px;
+}
+
+.button-ball {
+   left: 0px;
+   transition: all 0.3s ease-in-out;
+}
+.button-ball.open {
+   left: 48px;
+}
+.button-bg {
+   background: none;
+   transition: all 0.3s ease-in-out;
+}
+.button-bg.open {
+   background: #108612;
+}
