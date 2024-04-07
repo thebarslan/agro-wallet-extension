@@ -11,6 +11,7 @@ import SendTransaction from "./pages/SendTransaction";
 import WalletImport from "./pages/WalletImport";
 import Settings from "./pages/Settings";
 import TokenImport from "./pages/TokenImport";
+import NetworkChange from "./pages/NetworkChange";
 
 function App() {
    return (
@@ -23,6 +24,7 @@ function App() {
             <Route path="/sendtransaction" element={<SendTransaction />} />
             <Route path="/settings" element={<Settings />} />
             <Route path="/importtoken" element={<TokenImport />} />
+            <Route path="/networkchange" element={<NetworkChange />} />
             <Route
                path="/dashboard"
                element={<WithHeader children={<Dashboard />} />}

@@ -70,40 +70,16 @@ const Header = () => {
                      <MenuPasswordChange />
                   </div>
                </div>
-               <div
-                  className={`option-container w-full h-auto flex flex-col bg-shadow-relative items-center ${
-                     menuIndex === 1 ? "open" : ""
-                  }`}
-               >
-                  <div
-                     className={`option-button w-full flex justify-between px-5 h-12 items-center cursor-pointer hover:bg-[#ffffff1c] rounded-xl ${
-                        menuIndex === 1 && `bg-shadow-relative`
-                     }`}
-                     onClick={() => menuIndexHandler(1)}
-                  >
-                     <div className="container flex items-center gap-2">
-                        <AiOutlineGlobal className="text-white h-6 w-auto" />
-                        <h5 className="text-white font-medium text-base">
-                           Set Network
-                        </h5>
-                     </div>
-                     <FaAngleDown
-                        className={`h-4 w-auto text-white down-arrow ${
-                           menuIndex === 1 && `open`
-                        }`}
-                     />
-                  </div>
 
-                  <div
-                     className={`option overflow-hidden flex w-full px-5  ${
-                        menuIndex === 1 ? "open" : ""
-                     }`}
-                  >
-                     <div className="container flex gap-2">
-                        <MenuNetworkChange />
-                     </div>
-                  </div>
-               </div>
+               <button
+                  className="w-full h-12 bg-shadow-relative px-5 flex items-center gap-2 hover:bg-[#ffffff3d]"
+                  onClick={() => navigate("/networkchange")}
+               >
+                  <AiOutlineGlobal className="text-white h-6 w-auto" />
+                  <h5 className="text-white font-medium text-base">
+                     Change Network
+                  </h5>
+               </button>
                <button
                   className="w-full h-12 bg-shadow-relative px-5 flex items-center gap-2 hover:bg-[#ffffff3d]"
                   onClick={() => navigate("/settings")}

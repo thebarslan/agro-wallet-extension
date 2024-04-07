@@ -85,7 +85,7 @@ const Settings = () => {
                         </div>
                      </div>
                   </div>
-                  <div
+                  {/* <div
                      className={`option-container w-full h-auto flex flex-col items-center bg-shadow-relative ${
                         menuIndex === 2 ? "open" : ""
                      }`}
@@ -113,7 +113,7 @@ const Settings = () => {
                      >
                         <Menu2FA />
                      </div>
-                  </div>
+                  </div> */}
                </div>
             </div>
          </WhiteSpace>
